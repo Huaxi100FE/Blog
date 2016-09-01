@@ -1,0 +1,32 @@
+---
+title: Egret学习笔记（一） 
+tags: egret,typescript,game
+grammar_cjkRuby: true
+---
+
+
+>1.深度值，层级
+addChild,addChildAt,swapChildren,swapChildrenAt,setChildIndex
+
+![enter description here][1]
+
+>2.访问容器子对象的两种方法
+
+![enter description here][2]
+
+![enter description here][3]
+
+>3.添加与删除显示对象
+>>3.1 addChild只是显示对象，把一个存在的对象添加到页面（容器/舞台）中
+>>3.2 removeChild只是将一个对象移除显示页面（容器/舞台），删除后该对象依然存在
+
+![enter description here][4]
+
+![enter description here][5]
+
+
+  [1]: ./images/%E6%B7%B1%E5%BA%A6%E5%80%BC.png "深度值.png"
+  [2]: ./images/%E8%AE%BF%E9%97%AE%E5%AE%B9%E5%99%A8%E5%AD%90%E5%AF%B9%E8%B1%A11.png "访问容器子对象1.png"
+  [3]: ./images/%E8%AE%BF%E9%97%AE%E5%AD%90%E5%AE%B9%E5%99%A8%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95.png "访问子容器的两种方法.png"
+  [4]: ./images/%E6%B7%BB%E5%8A%A0%E3%80%81%E5%88%A0%E9%99%A41.png "添加、删除1.png"
+  [5]: ./images/%E6%B7%BB%E5%8A%A0%E3%80%81%E5%88%A0%E9%99%A4.jpg "添加、删除.jpg"
