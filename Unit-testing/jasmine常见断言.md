@@ -5,10 +5,10 @@ grammar_cjkRuby: true
 ---
 
 
-__1. expect(x).toEqual(y);__
-
-//比较x和y是否相等
-
+__1.比较x和y是否相等__
+```markdown
+ expect(x).toEqual(y);
+```
 __2. expect(x).not.toEqual(y);__
 
 //比较x和y是否不相等
