@@ -1,4 +1,4 @@
--> # Egret容器显示<-
+# <center>Egret容器显示
 ### 1.深度值，层级
 addChild,addChildAt,swapChildren,swapChildrenAt,setChildIndex使用方法如下图：
 
