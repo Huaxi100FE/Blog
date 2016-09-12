@@ -3,7 +3,7 @@
 css lock 是一项响应式设计的技术，依赖于当前的视图尺寸平滑地过度于两个数值之间，而不是从一个数值直接跳到另外一个数值。
 
 这个概念是Tim Brown在他的博文
-[Flexible typography with CSS locks]（http://blog.typekit.com/2016/08/17/flexible-typography-with-css-locks/）提出并实现的。
+[Flexible typography with CSS locks](http://blog.typekit.com/2016/08/17/flexible-typography-with-css-locks/)提出并实现的。
 
 当我试着去弄明白Tim对它的实现和定义变量的时候，我花了好一会儿去搞明白到底怎么回事。我做了许多封底计算，认为分享一下这里面的数学原理。
 
