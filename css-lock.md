@@ -25,17 +25,17 @@ css lock 是一项响应式设计的技术，依赖于当前的视图尺寸平�
 
 这有两方面缺点：
 
-	1）文本在小视图里面确实小了（12.8px at 320px）,但是在大视图里面大太多了（64pxx at 1600px）
+1）文本在小视图里面确实小了（12.8px at 320px）,但是在大视图里面大太多了（64pxx at 1600px）
 
-	2）它没办法相应用户更改字号的行为
+2）它没办法相应用户更改字号的行为
 
 ###·css lock 概念###
 
 css lock 在这里是一个特殊的css数值计算：
 
-	- 有最大值和最小值
-	- 有两个断点（通常鲫鱼视图宽度）
-	- 在这两个断点之间，实际数值从最小值线性变化到最大值
+- 有最大值和最小值
+- 有两个断点（通常鲫鱼视图宽度）
+- 在这两个断点之间，实际数值从最小值线性变化到最大值
 
 
 ![图片名称](http://fvsch.com/code/css-locks/px-fontsize-complete.png)
@@ -73,8 +73,8 @@ viewport_ralative_value 可能是个简单的数值或者是个复杂的计算�
 
 一些css lock 失效的例子：
 
-	- 对opacity属性使用css lock，因为opacity：calc（.5 + 1px）是错误的。
-	- 对大部分transform使用css lock
+- 对opacity属性使用css lock，因为opacity：calc（.5 + 1px）是错误的。
+- 对大部分transform使用css lock
 
 好了，所以这个对px的限制使得对css lock使用看起来相当地局限，但是一些勇敢机智的人们前去验证了所有的属性和技术来让css lock 生效。
 
@@ -98,10 +98,10 @@ viewport_ralative_value 可能是个简单的数值或者是个复杂的计算�
 
 途中我们看到红线是一个简单的线性函数，我们可以写成这样 y = m*x + b ， 这里：
 
-	- y是我们的font-size （纵坐标）
-	- x 是viewport 的宽度 （横坐标）
-	- m 是函数的斜率
-	- b是font-size的初始值
+- y是我们的font-size （纵坐标）
+- x 是viewport 的宽度 （横坐标）
+- m 是函数的斜率
+- b是font-size的初始值
 
 我们接下来要做的就是分别找出m 和 b的值，它们你是等式里面不会改变的部分。
 
@@ -299,8 +299,8 @@ b1 = -10
 
 自从我们知道要动态改变css，我们需要知道1.4和1.8到底是多少px。假设我们的段落使用默认字号，可能是16px，我们的数据点就是：
 
-	- 16 * 1.4 = 22.4 （320px）
-	- 16 * 1.8 = 28.8 （960px）
+- 16 * 1.4 = 22.4 （320px）
+- 16 * 1.8 = 28.8 （960px）
 
 我们也用140% = 22.4px 作为我们的基值，因此我们增长就是6.4px，公式计算：
 
@@ -368,8 +368,8 @@ p { line-height: 140%; }
 
 这就需要改变我们的数据点了：
 
-	- 16 * 1.66 * 1.4 = 37.184  (320px)
-	- 16 * 1.66 * 1.8 = 47.808 (960px)
+- 16 * 1.66 * 1.4 = 37.184  (320px)
+- 16 * 1.66 * 1.8 = 47.808 (960px)
 
 重新计算得到新的公式： y′ = 0.0166x - 5.312。然后得到：
 
@@ -420,8 +420,8 @@ p { line-height: 140%; }
 
 总的规则，就是字号变大的时候行高变小，字号变小的时候行高变大。这个场景里面，规则同时间都是矛盾的，因此我们不得不优先选择：
 
-	- 对h1，字号增幅比行高增幅剧烈
-	- 对段落， 行高增幅比字号增幅剧烈
+- 对h1，字号增幅比行高增幅剧烈
+- 对段落， 行高增幅比字号增幅剧烈
 
 现在，让我们选取两个断点，依然是320px和960px，开始写font-size locks：
 
@@ -446,13 +446,13 @@ p { line-height: 140%; }
 这里没有什么不同，除了数值。
 下一步，计算line-height locks将会比之前的例子困难一些。让我们从h1开始吧。我们会为line-heiht使用相关的基值，因此得到最小值120%。因为元素的font size 是变量，所以120% 将被描述成动态的线性值：
 
-	- 24 * 1.2 = 28.8 （320px）
-	- 40 * 1.2 = 48 （960px）
+- 24 * 1.2 = 28.8 （320px）
+- 40 * 1.2 = 48 （960px）
 
 我们也知道在低值断点，想要line-height 133.33%。 我们相会找到一个描述增加到基值的线性函数。如果我们把这120% 移除，我们得到两个数据：
 
-	- 24（1.3333 - 1.2） = 3.2px （320px）
-	- 40 （1.2 -1.2 ） = 0 （960px）
+- 24（1.3333 - 1.2） = 3.2px （320px）
+- 40 （1.2 -1.2 ） = 0 （960px）
 
 最终得到一个负斜率。计算如下：
 
@@ -551,14 +551,14 @@ p { line-height: 140%; }
 
 这是因为在media query里面的内容，em 和 rem 都会参考 user agent 的font size。也就是前面提过几次的通常都是16px，但是他可能更小或者更大依赖于两个条件：
 
-	- 浏览器或者操作系统
-	- 用户偏向
+- 浏览器或者操作系统
+- 用户偏向
 
 这就意味着如果我们有两个断点 20em 和 60em， 实际的css 宽度他们会匹配如下：
 
-	- 320px / 960x  font size 基值为16px
-	- 480px / 1440px font size 基值为24px
-	- etc
+- 320px / 960x  font size 基值为16px
+- 480px / 1440px font size 基值为24px
+- etc
 
 第二部分，我们的例子是这样： 
 
@@ -593,13 +593,13 @@ p { line-height: 140%; }
 
 这里发生了什么？ 当我们改变font-size的基值，基于em的断点移动到了更大的px值。尽管我们的 3.125vw - 10px 的值 在具体的断点的值也是对的。
 
-	- 320px， 3.125vw - 10px = 0 .如计划
-	- 480px， 3.125vw - 10px = 5px 。 哭.jpg
+- 320px， 3.125vw - 10px = 0 .如计划
+- 480px， 3.125vw - 10px = 5px 。 哭.jpg
 
 在高值断点情况更糟：
 
-	- 960px， 3.125vw - 10px = 20px， 如期望
-	- 1440px， 3.125vw - 10px = 35px， 大了15px
+- 960px， 3.125vw - 10px = 20px， 如期望
+- 1440px， 3.125vw - 10px = 35px， 大了15px
 
 如果我们想使用基于em的断点，我们需要不同的技术。
 
@@ -607,8 +607,8 @@ p { line-height: 140%; }
 
 这个技术，在 Tim Brown的文章题目的示范，依赖于把更多的计算交给css做，使用两个可变部分：
 
-	- 100vw， the veiwport 宽度
-	- 低值的断点，使用rem 来表示
+- 100vw， the veiwport 宽度
+- 低值的断点，使用rem 来表示
 
 公式使用：
 ```
@@ -820,21 +820,13 @@ h1 {
   font-size: 1.25rem;
 }
 
-@media (min-width: 20em) {
-  /* The (100vw - 20rem) / (60 - 20) part
-     resolves to 0-1rem, depending on the
-     viewport width (between 20em and 60em). */
+@media (min-width: 20em) {  
   h1 {
     font-size: calc( 1.25rem + 1.25 * (100vw - 20rem) / (60 - 20) );
   }
 }
 
-@media (min-width: 60em) {
-  /* The right part of the addition *must* be a
-     rem value. In this example we *could* change
-     the whole declaration to font-size:2.5rem,
-     but if our basline value was not expressed
-     in rem we would have to use calc. */
+@media (min-width: 60em) { 
   h1 {
     font-size: calc( 1.25rem + 1.25 * 1rem );
   }
@@ -907,9 +899,9 @@ line-height的可变部分，我们知道我们想要一个rem值，因为  (100
 ```
 注意两件事：
 
-	1） .2rem 只在我们的font-size lock 为 24px到40px之间正确。
+1） .2rem 只在我们的font-size lock 为 24px到40px之间正确。
 
-	2） 因为我们颠倒了断点值，所以viewport的宽度低于60em或者高于20em，(100vw - 60rem) / (20 - 60) 计算结果都是负数。 举个例子，在低值断点，以16px为font-size基值，它等于 -640px / -40. 两个负数相除得到一个正数，我们不需要改变.2因子前面的符号标识。
+2） 因为我们颠倒了断点值，所以viewport的宽度低于60em或者高于20em，(100vw - 60rem) / (20 - 60) 计算结果都是负数。 举个例子，在低值断点，以16px为font-size基值，它等于 -640px / -40. 两个负数相除得到一个正数，我们不需要改变.2因子前面的符号标识。
 
 ##4、总结##
 
