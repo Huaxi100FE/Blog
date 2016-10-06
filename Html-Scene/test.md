@@ -22,8 +22,8 @@
 ### 7.[智者，大成] (http://special.mercedes-benz.com.cn/thenewe-classteaser/mobile/index.html)
 canvas打造的动画很流畅，工程庞大啊，写成一个一个文字。
 
-### 8.[中秋，邀请好友一起赏月] (http://sunnyhills.pansen.net.cn/moon/sh)
-一只兔子奔跑中，路上遇到一个个伙伴，一起同行，又遇到一个伙伴，一起同行。然后用户选择你的目的地，你想要说的话，分享之后。通过分享的链接打开，兔子就需要多接个小伙伴，就是你要邀请的人，你需要说的话。
+### 8.[京东2017海外招聘] (http://jdc.jd.com/h5/jd-campus-2017/international/index.html)
+喜欢第二页显示和隐藏的动画效果。
 
 ### 9.[中秋，邀请好友一起赏月] (http://sunnyhills.pansen.net.cn/moon/sh)
 一只兔子奔跑中，路上遇到一个个伙伴，一起同行，又遇到一个伙伴，一起同行。然后用户选择你的目的地，你想要说的话，分享之后。通过分享的链接打开，兔子就需要多接个小伙伴，就是你要邀请的人，你需要说的话。
