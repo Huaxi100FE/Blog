@@ -18,7 +18,7 @@ let octal: number = 0o744;
 
 它们与let声明相似，但是它们被赋值后不能再改变。const是对let的一个增强，它能阻止对一个变量再次赋值。
 ```
-const 声明
+const numLivesForCat = 9;
 ```
 
 
