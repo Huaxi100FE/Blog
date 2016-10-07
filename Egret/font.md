@@ -79,6 +79,13 @@ text.textFlow = new egret.HtmlTextParser().parser(str);
 ```
 
 
+
+
+
+
+
+
+
 #### 参考资料：
 > 1. http://developer.egret.com/cn/example/page/index
 
