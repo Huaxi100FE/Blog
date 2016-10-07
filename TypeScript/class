@@ -1,0 +1,30 @@
+# typescript基本数据类型
+
+### 1. boolean类型
+```
+text.bold = true;
+```
+### 2. number类型
+```
+text.textColor = 0xffffff;
+```
+### 3. string类型
+```
+text.textFlow = new Array<egret.ITextElement>(
+    { text:"这段文字有链接", style: { "href" : "event:text event triggered", underline:true } }, 
+    { text:"\n这段文字没链接", style: {"textColor" : 0x999999} }
+);
+```
+
+
+
+
+
+
+
+
+
+
+#### 参考资料：
+> 1. http://www.jikexueyuan.com/course/281.html
+
