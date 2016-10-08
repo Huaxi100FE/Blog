@@ -1,5 +1,5 @@
 # karma 和 jasmine使用
-### 1. 被测试方法黄色
+### 1. 被测试方法
 
 ![](images/testFun.png)
 ### 2. 测试断言
@@ -33,5 +33,5 @@ karma start
 
 
 #### 参考资料：
-> 1. http://developer.egret.com/cn/example/page/index
+> 1. 
 
