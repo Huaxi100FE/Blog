@@ -19,6 +19,8 @@ private drawLine(): void {
 }
 ```    
 ### 1.2. 曲线
+
+![](images/point.png)
 ```
 private drawCurve(): void {
     var shp: egret.Shape = new egret.Shape();
