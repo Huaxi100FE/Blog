@@ -1,11 +1,27 @@
-# egret字体设置
+# karma 和 jasmine使用
+### 1. 被测试方法黄色
+
+![](images/testFun.png)
+### 2. 测试断言
+
+![](images/jasmine.png)
+### 3. 配置文件
+
+![](images/config.png)
+### 4. 运行
+在命令行输入“karma start”
 ```
-var text:egret.TextField = new egret.TextField();
+karma start
 ```
-### 1. 字体加粗
-```
-text.bold = true;
-```
+### 5. 结果
+
+![](images/startCmd.png)
+
+![](images/localhost.png)
+
+![](images/debug.png)
+
+
 
 
 
