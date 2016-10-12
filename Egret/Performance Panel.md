@@ -12,6 +12,9 @@
 + 2.2 draw 画的数量，画的区域的百分比
 
 + 2.3 cost 计算脏矩形开销 draw开销
+### 3. 修改性能面板
+
+![](images/updataFps.png)
 
 
 
