@@ -27,3 +27,12 @@ canvas打造的动画很流畅，工程庞大啊，写成一个一个文字。
 
 ### 9.[金立S6 Pro就耀快发布会] (http://gionees6pro.wutaiwei.com/index.html?friend=1)
 喜欢加载页面，模拟微信，新鲜创意不错。
+
+### 10.[一份没有真新闻却有真实惠的父亲节日报] (http://mws.fengjr.com/public/dist/mobile-web/dist/2016-06/fatherDayHDRB/index.html)
+如同翻阅书籍般的。
+
+### 11.[尚迪] (http://zadig.koikreative.com/)
+动画效果。
+
+### 12.[《大众软件》剑侠情缘特刊] (http://jxqy.qq.com/act/20160530popsoft/1)
+canvas做得和视频差不多了。
