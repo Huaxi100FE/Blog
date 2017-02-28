@@ -1,26 +1,34 @@
 # git bash 基本用法
-![](images/types.png)
-### 1. boolean类型
-![](images/boolean.png)
-```
-let isDone: boolean = false;
-```
-### 2. number类型
 
-![](images/number.jpg)
-```
-let decimal: number = 6;
-let hex: number = 0xf00d;
-let binary: number = 0b1010;
-let octal: number = 0o744;
-```
-### 3. string类型
+### 1. 初始化
 
-![](images/string.png)
 ```
-let name: string = "bob";
-name = "smith";
+$ git init
 ```
+### 2. 克隆仓库
+
+```
+$ git clone 需要克隆的仓库地址
+```
+### 3. 拉取远程仓库代码
+
+```
+$ git pull origin master
+```
+### 4. 推送到远程仓库代码
+
+```
+$ git push origin master
+```
+### 5.查看远程仓库地址
+```
+$ git remote -v
+```
+### 6.撤消操作
+```
+$ git commit --amend
+```
+
 
 
 
