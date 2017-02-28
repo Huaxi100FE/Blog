@@ -41,6 +41,4 @@ name = "smith";
 > 7. http://www.cnblogs.com/Leo_wl/p/4793722.html
 
 
-> 1. http://www.open-open.com/news/view/1c51682
-> 2. http://www.jianshu.com/p/8c9c8f5649c9
 
