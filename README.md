@@ -33,10 +33,13 @@
 
 ### 8. [git bash](https://github.com/Huaxi100FE/Blog/blob/nancy/Html-Game/test.md)
 
-    1. [git bash基本用法](https://github.com/Huaxi100FE/Blog/blob/nancy/git%20bash/git%20bash%20基本用法.md)
+   1. [git bash基本用法](https://github.com/Huaxi100FE/Blog/blob/nancy/git%20bash/git%20bash%20基本用法.md)
+    
 ### 9. [TypeScript](https://github.com/Huaxi100FE/Blog/tree/nancy/TypeScript)
 
-    1. [typescript基本数据类型](https://github.com/Huaxi100FE/Blog/blob/nancy/TypeScript/Basic%20Types.md)
-    2. [typescript变量声明](https://github.com/Huaxi100FE/Blog/blob/nancy/TypeScript/variable-declarations.md)
+   1. [typescript基本数据类型](https://github.com/Huaxi100FE/Blog/blob/nancy/TypeScript/Basic%20Types.md)
+   
+   2. [typescript变量声明](https://github.com/Huaxi100FE/Blog/blob/nancy/TypeScript/variable-declarations.md)
+   
 ### 10. [Ecmascript](https://github.com/Huaxi100FE/Blog/tree/nancy/ES6)
 
