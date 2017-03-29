@@ -3,7 +3,9 @@
 ### 1. 语法
 ```
 var single = a => a
-```等同于es5```
+```
+等同于es5
+```
 var single = function(a ){ return a};
 ```
 
