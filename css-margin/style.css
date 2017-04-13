@@ -1,0 +1,46 @@
+html,body{
+    background-color: aliceblue;
+    position: relative;
+}
+.block1{
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    border: solid 10px bisque;
+    margin: 10px;
+    background-color: blue;
+
+}
+.in{
+    height: 100px;
+}
+.block2{
+    background-color: blue;
+    margin: 200px 100px;
+    color: #fff;
+}
+.block3,.block4{
+    margin: 0 auto;
+    width: 600px;
+    height: 500px;
+}
+.block4{
+    position: relative;
+    background-color: lemonchiffon;
+}
+.block3-in{
+    width: 400px;
+    height: 400px;
+    margin: 10% 10%;
+    background-color: blue;
+}
+.block4-in{
+    width: 400px;
+    height: 400px;
+    margin: 10% 10%;
+    background-color: blue;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
