@@ -1,0 +1,97 @@
+html,body{background-color: gray;}
+.tra{
+    margin: 5px auto;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-left: solid 50px #000;
+    border-right: solid 50px gold;
+    border-top: solid 50px bisque;
+    border-bottom: solid 50px blue;
+}
+.tra1{
+    margin: 5px auto;
+    width: 0;
+    height: 0;
+    border-left: solid 50px #000;
+    border-right: solid 50px gold;
+    border-top: solid 50px bisque;
+    border-bottom: solid 50px blue;
+}
+.tra2{
+    margin: 5px auto;
+    width: 0;
+    height: 0;
+    border: solid 50px transparent;
+    border-left: solid 50px #000;
+    border-bottom: solid 50px blue;
+}
+.tra3{
+    margin: 5px auto;
+    width: 0;
+    height: 0;
+    border: solid 50px transparent;
+    border-left-color: blue;
+}
+.tra4{
+    margin: 5px auto;
+    width: 200px;
+    height: 50px;
+    background-color: #fff;
+    border: solid 10px blue ;
+    border-radius: 10px;
+}
+.tra5{
+    margin: 25px auto;
+    width: 200px;
+    height: 100px;
+    border: solid 40px blue;
+    border-radius: 80px 40px;
+}
+.tra6{
+    margin: 25px auto;
+    width: 200px;
+    height: 40px;
+    border: solid 40px transparent;
+    border-left-color: #000;
+    border-bottom:solid 0  #000;
+    border-radius: 0 0 0 80px;
+}
+.tra7{
+    margin: 25px auto;
+    width: 200px;
+    height: 100px;
+    background-color: #000;
+    outline: solid 10px blue;
+    outline-offset: 5px;
+    border-radius: 20px 20px;
+}
+.tra8{
+    margin: 60px auto;
+    width: 200px;
+    height: 100px;
+    background-color: #000;
+    border-radius: 20px 20px;
+    outline: solid 10px blue;
+    outline-offset: -25px;
+}
+.tra9{
+    margin: 25px auto;
+    width: 400px;
+    height: 200px;
+    background: -webkit-linear-gradient(left,blue 0%,#fff 50%,#fff 50%,#fff 100%); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(left,blue 0%,#fff 50%,#fff 50%,#fff 100%); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(left,blue 0%,#fff 50%,#fff 50%,#fff 100%); /* Firefox 3.6 - 15 */
+    background: linear-gradient(left,blue 0%,#fff 50%,#fff 50%,#fff 100%);
+}
+.tra10{
+    margin: 25px auto;
+    width: 200px;
+    height: 200px;
+    background-image: -webkit-radial-gradient(100px,transparent 0%, transparent 50%,blue 50%,blue 100%);
+    background-image: -moz-radial-gradient(100px,transparent 0%, transparent 50%,blue 50%,blue 100%);
+    background-image: -o-radial-gradient(100px,transparent 0%, transparent 50%,blue 50%,blue 100%);
+    background-image: radial-gradient(100px,transparent 0%, transparent 50%,blue 50%,blue 100%);
+}
+
+
