@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript" charset="utf-8">
+
+    //1、call apply 简单的用法：绑定一些函数 用于传递参数 调用
+    function sun(a,b){
+        return a+b;
+    }
+    function callFun(a,b){
+        //绑定函数 用于传递参数 调用
+        return sun.call(this,a,b);
+    }
+    function applyFun(a,b){
+        return sun.apply(this,[a,b]);
+    }
+    console.log(callFun(10,20));
+    console.log(applyFun(30,100));
+
+    //2、扩充作用域
+    color='red';
+    var obj={color:'blue',name:'object'};
+    function showColor(){
+        console.log(this.color);
+        console.log(this.name);
+    }
+    showColor.apply(this);//相当于将showColor函数绑定到window对象下
+    showColor.apply(obj);//相当于将showColor函数绑定到obj对象下
+
+
+
+    //3、call方法的简单原理实现 apply原理类似
+
+    //function方法
+    function test(a,b){
+        return a+b;
+    }
+    //自定义对象
+    function Obj(x,y){
+        this.x=x;
+        this.y=y;
+    }
+    var o=new Obj(10,20);
+    console.log(test.call(o,o.x,o.y));
+    /* test.call(o,o.x,o.y)方法相当于：
+    *  o.method=test; //创建一个方法 令其等于test方法
+    *  o.method();  //执method行该方法
+    *  delete o.method 用完后再删除method方法
+    * */
+
+</script>
+</body>
+</html>
