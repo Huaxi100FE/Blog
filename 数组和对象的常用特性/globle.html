@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript" charset="UTF-8">
+    //单体对象
+
+    //Global 全局对象 终极对象
+
+    //1、encodeURI,encodeURIComponent（对一些不规范URI进行编码）
+    var uri='http://www.js基础教程 \n.com.cn';
+    /*encodeURI 不会对斜杠 冒号等某些特殊的字符进行转码*/
+    console.log(encodeURI(uri));//http://www.js%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B%20%0A.com.cn
+    /*encodeURIComponent 会对浏览器不识别的所有的特殊字符进行转码 比较常用*/
+    console.log(encodeURIComponent(uri));//http%3A%2F%2Fwww.js%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B%20%0A.com.cn
+
+    //2、decodeURI,decodeURIComponent（对一些不规范URI进行编码）
+    console.log(decodeURI('http://www.js%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B%20%0A.com.cn'));
+    console.log(decodeURIComponent('http%3A%2F%2Fwww.js%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B%20%0A.com.cn'))
+    //'http://www.js基础教程 \n.com.cn';
+
+
+    //3、eval(string) 方法 无形的javascript解析器
+    var str="var a='eval str';console.log(a);";
+    eval(str); //eval str
+
+    //对象字符串直接使用（特殊的方法 可以直接使用）
+    var attrObj="{name:'lisa',age:18}";
+    var obj=eval('('+attrObj+')');
+    console.log(obj);
+
+
+    //4、parseInt,parseFloat(就是将字符串转成对应的number类型)
+    console.log(typeof parseInt('2ad'),parseInt('2ad'));//number 2
+    console.log(typeof parseFloat('2.4faf'),parseFloat('2.4faf'));//number 2.4
+
+
+
+    //5、Escape,unescape 也是正对解码的
+
+    // isNaN 判断一个变量不是number类型 不是number类型返回true 是的话返回false
+    var num1='10',num2='abc',num3=10;
+    console.log(isNaN(num1),isNaN(num2),isNaN(num3));//false true false
+    /*看得出来是先经过转换后 在判断的*/
+    /*其中NaN 不等于 NaN*/
+    console.log(NaN ==NaN); //false
+
+
+    //6、Date()类型
+    var date=new Date();
+    /*其中一些获取年份的方法*/
+    var year=date.getFullYear(),moth=date.getMonth(),dt=date.getDate(),day=date.getDay(),min=date.getMinutes(),hours=date.getHours(),sconds=date.getSeconds();
+    console.log(year+'年'+moth+'月'+dt+'日');
+    console.log(hours+'时'+min+'分'+sconds+'秒');
+
+    //7、Boolean，String，Number
+    /*包装类型，是一个专门封装原始类型的值，并提供对原始类型的值执行操作的API对象*/
+
+    /*里面包括很多种方法*/
+    var bool=new Boolean('0');
+    var bool1=new Boolean(null);
+    console.log(bool,bool1);
+
+    var str=new String('abc');
+    /*PrimitiveValue 原始值*/
+    console.log(str);//String {0: "a", 1: "b", 2: "c", length: 3, [[PrimitiveValue]]: "abc"}
+
+
+    var num4 =new Number(123);
+    console.log(num4); //Number {[[PrimitiveValue]]: 123}
+</script>
+</body>
+</html>
