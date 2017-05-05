@@ -32,7 +32,7 @@ bar // "bbb"
 
 
 #### 参考资料：
-> 1. http://es6.ruanyifeng.com/#docs/destructuring
+> 1. http://es6.ruanyifeng.com/#docs/proxy
 > 2.http://www.infoq.com/cn/articles/es6-in-depth-proxies-and-reflect?utm_source=articles_about_ES6-In-Depth&utm_medium=link&utm_campaign=ES6-In-Depth
 
 
