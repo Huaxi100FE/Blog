@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript" charset="UTF-8">
+    function test1(a,b,c,d){
+        return a+b;
+    }
+    console.log(test1());//NaN
+
+
+    //1、怎么获取函数的形参 函数名.length
+    function test2(a,b,c,d){
+        console.log(test2.length); // 4
+    }
+    test2();
+    console.log(test2.length); // 4
+
+    // 2、函数的实参
+
+    function test3(a,b,c,d){
+        //函数的实际参数，内部是使用一个数组去接受实际参数的
+        //arguments对象 可以访问函数的实际参数 且只能在函数内部使用
+        console.log(arguments.length,arguments);//3 [10,20,30]
+    }
+    test3(10,20,30);
+
+    //3、arguments对象 用的最多是递归操作
+    //arguments.callee 就是指函数本身
+    function test4(a,b,c,d,f){
+        console.log(arguments.callee.length);
+    }
+    test4(1,2,3,4,5,6);
+    function test5(num){
+        if(num<=1){
+            return 1;
+        }else{
+            return num*arguments.callee(num-1);
+            // 相当于调用自己 求递归
+        }
+    }
+    console.log(test5(5));
+
+    for (var i=1; i<=5; i++) {
+        (function(j) {
+            setTimeout( function timer() {
+                console.log( j );
+            }, j*1000 );
+        })( i );
+    }
+    for (var i=1; i<=5; i++) {
+        (function(){
+            setTimeout( function timer() {
+                console.log( i ,'->i');
+            }, i*1000 );
+        })(i);
+    }
+
+</script>
+</body>
+</html>
