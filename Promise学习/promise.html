@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript" charset="utf-8">
+    /*1、promise的resolve方法*/
+    var p1=Promise.resolve('1213131');
+    p1.then(function(value){
+        console.log(value)
+    },function(err){
+        console.log(err);//不会执行reject后的方法
+    });
+
+
+    /*2、promise的reject方法*/
+    Promise.reject('err').then(function(){
+        //不会执行resolve后的方法
+    },function(err){
+        console.log(err);
+    });
+
+    /*3、promise.prototype.then方法*/
+    function fn(num) {
+        var p2 = new Promise(function (resolve, reject) {
+            if (typeof num == 'number') {
+                resolve('success');
+            } else {
+                reject('fail');
+            }
+        }).then(function (value) {
+                    console.log('参数是一个number值', value);
+                }, function (err) {
+                    console.log('参数不是一个number值', err);
+                }
+        );
+        return p2;
+    }
+    fn('string');
+    /*then 的return妙用*/
+    /*1) return 另一个 promise
+      2) return 一个同步的值 (或者 undefined)
+      3) throw 一个同步异常 ` throw new Eror('');`*/
+    /*=========return 另一个 promise===========*/
+    function fn1(num) {
+        var p2 = new Promise(function (resolve, reject) {
+            if (typeof num == 'number') {
+                resolve('success');
+            } else {
+                reject('fail');
+            }
+        }).then(function (value) {
+                    console.log('参数是一个number值', value);
+                    return new Promise(function (resolve, reject) {
+                        if (false) {
+                            resolve('then2 success')
+                        } else {
+                            reject('then2 fail')
+                        }
+                    })
+                }, function (err) {
+                    console.log('参数不是一个number值', err);
+                    return 'this is promise2'
+                }
+        ).then(function (value) {
+                    console.log('1=>', value);
+                }, function (err) {
+
+                    console.log('2=>', err);
+                });
+
+        return p2;
+    }
+    fn1(22222);
+    /*======return 一个同步的值 (或者 undefined) ======*/
+    function fun(num){
+        return new Promise(function(resolve,reject){
+            if(typeof num=='number'){
+                resolve('this is a number');
+            }else{
+                reject('this is not a number');
+            }
+        }).then(function(value){
+                    console.log('resolve',value);
+                    return ++num;
+                },function(err){
+                    console.log('reject',err);
+                    return 'TypeError'
+        }).then(function(value){
+                    console.log(value);
+                })
+    }
+    fun('88888');
+
+    /*=========throw 一个同步异常 ` throw new Eror('')========*/
+    function fun1(num){
+        return new Promise(function(resolve,reject){
+            if(typeof num=='number'){
+                resolve('this is a number');
+            }else{
+
+                reject('this is not a number');
+                throw 'typeError';
+            }
+        }).catch(function(err){
+                 console.log('catch',err);
+                })
+    }
+    fun1('88888');
+
+
+
+    /*promise.prototype.then(null,...)相当于Promsie.prototype.catch*/
+    new Promise(function (resolve, reject) {
+        throw new TypeError('悲剧了，又出 bug 了');
+    }).catch(function(err){
+             console.log(err);
+    });
+
+
+    /*promise.all*/
+    var url1='http://url1',
+            url2='http://url2';
+    function renderAll(){
+        return new Promise(getJSON(url1),getJSON(url2));
+    }
+    renderAll().then(function(value){
+        console.log(value)
+    });
+    /*promise.race*/
+    function renderRace() {
+        return Promise.race([getJSON(url), getJSON(url1)]);
+    }
+
+    renderRace().then(function(value) {
+        console.log(value);
+    })
+
+</script>
+</body>
+</html>
