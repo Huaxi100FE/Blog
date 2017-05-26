@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    /*存储*/
+    sessionStorage.setItem('key1','value1');
+    sessionStorage.setItem('key2','value2');
+    /*查找*/
+    var v1=sessionStorage.getItem('key1');
+    var v2=sessionStorage.key2;
+    console.log(v1,v2);
+    /*遍历*/
+    for(var i= 0,len=sessionStorage.length;i<len;i++){
+        console.log(sessionStorage.key(i))
+    }
+    /*迭代*/
+    for(var key in sessionStorage){
+        console.log(key);
+        console.log(sessionStorage[key]);
+    }
+    /*删除 */
+    sessionStorage.removeItem('key1');
+
+    localStorage.setItem('key1','value1');
+    localStorage.o='0000';
+
+    /*====*/
+    function clearStorage(h){
+        var lastRead;
+        if(!localStorage.getItem('lastRead')){
+            localStorage.setItem('lastRead',(new Date().toUTCString()));
+        }else{
+            lastRead=new Date(Date.parse(localStorage.getItem('lastRead')));
+            console.log(lastRead);
+            var year=lastRead.getFullYear(),//年
+                mouth=lastRead.getMonth(), //月
+                day=lastRead.getDay(),   //日
+                hour=lastRead.getHours()+h,  //时
+                min=lastRead.getMinutes(),//分
+                seconds=lastRead.getSeconds();//秒
+            var endDate=new Date(year,mouth,day,hour+h,min,seconds),
+                endTime=endDate.getTime();
+        }
+    }
+    clearStorage(3)
+
+
+
+</script>
+</body>
+</html>
