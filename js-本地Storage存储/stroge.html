@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    /*存储*/
+    sessionStorage.setItem('key1','value1');
+    sessionStorage.setItem('key2','value2');
+    /*查找*/
+    var v1=sessionStorage.getItem('key1');
+    var v2=sessionStorage.key2;
+    console.log(v1,v2);
+    /*遍历*/
+    for(var i= 0,len=sessionStorage.length;i<len;i++){
+        console.log(sessionStorage.key(i))
+    }
+    /*迭代*/
+    for(var key in sessionStorage){
+        console.log(key);
+        console.log(sessionStorage[key]);
+    }
+    /*删除 */
+    sessionStorage.removeItem('key1');
+
+    localStorage.setItem('key1','value1');
+    localStorage.o='0000';
+
+    /*==从上一次访问 超多多长时间 清楚localStorage==*/
+    function clearStorage(h){
+        var lastRead;
+        if(!localStorage.getItem('lastRead')){
+            localStorage.setItem('lastRead',(new Date().toUTCString()));
+        }else{
+            lastRead=new Date(Date.parse(localStorage.getItem('lastRead')));
+            console.log(lastRead.getTime(),lastRead,'->最后一次记录时间');
+            var year=lastRead.getFullYear(),//年
+                mouth=lastRead.getMonth(), //月
+                day=lastRead.getDate(),   //日
+                hour=lastRead.getHours()+h,  //时
+                min=lastRead.getMinutes(),//分
+                seconds=lastRead.getSeconds();//秒
+            var endDate=new Date(year,mouth,day,hour,min,seconds),
+                endTime=endDate.getTime();
+            console.log((new Date()).getTime(),new Date(),'->现在的时间');
+            console.log(endTime,new Date(endTime),'->加了超时后的时间') ;
+            if(endTime<(new Date()).getTime()){
+                localStorage.clear();
+            }
+        }
+    }
+    clearStorage(5);//参数为小时
+    /*倒计时*/
+    function djs(minute){
+        //倒计时 js
+        var date=new Date();
+        var year=date.getFullYear();//年
+        var mouth=date.getMonth();//月
+        var day=date.getDate();//日  getDate()方法
+        var time=date.getHours();//时 24小时制
+        var min=date.getMinutes()+minute;//分
+        var seconds=date.getSeconds();//秒
+        console.log(year,mouth,day,time,min,seconds);
+
+        var endDate=new Date(year,mouth,day,time,min,seconds);
+        var end=endDate.getTime();
+        var d, h, m , s;
+        function countTime(){
+            var nowDate=new Date();
+            var currentTime=end-nowDate.getTime();
+            if(currentTime>0){
+                d=Math.floor(currentTime/1000/60/60/24);//天数
+                h=Math.floor(currentTime/1000/60/60%24);//小时
+                m=Math.floor(currentTime/1000/60%60);//分
+                s=Math.floor(currentTime/1000%60);//秒
+            }
+            console.log(d,h,m,s);
+        }
+        setInterval(countTime,1000);
+    }
+    //djs(30);//参数为分钟数
+
+
+</script>
+</body>
+</html>
