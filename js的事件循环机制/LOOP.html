@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    console.log('first');
+    setTimeout(function() {
+        console.log('timeout1');
+    });
+
+    new Promise(function(resolve) {
+        console.log('promise1');
+        for(var i = 0; i < 1000; i++) {
+            i == 99 && resolve();
+        }
+        console.log('promise2');
+    }).then(function() {
+                console.log('then1');
+    });
+
+    console.log('global1');
+
+    /*
+    * 第一步、事件循环首先从宏队列开始，这个时候，宏任务队列中，只有script(整体代码)
+    * 1）首先script任务开始执行，全局上下文入栈。
+    * 2）依次执行，所以这里会先输出first，继续执行碰到 setTimeout，setTimeout为一个宏任务源，那么他的作用就是将任务分发到它对应的队列中。
+    *
+    * 3）建立第二个宏任务队列 setTimeout队列
+    * 4）继续向下执行 知道遇到promise ，Promise实例。Promise构造函数中的第一个参数，是在new的时候执行，因此不会进入任何其他的队列，而是直接在当前任务直接执行了，而后续的.then则会被分发到micro-task的Promise队列中去。
+    *    所以这里会先输出 promise1，再进行for循环，将then方法推入micro-task队列中。在继续执行 输出promise2，global1。
+    * 第二步、当script的全局调用栈执清空（只是全局），然后开始执行micro-task，也就是promise的then方法，输出then1
+    * 第三步、然后开始执行第二个宏任务 setTimeout，输出timeout1 然后整个script执行结束。
+    *
+    *
+    * 所以最后依次输出:
+    * first
+    * promise1
+    * promise2
+    * global1
+    * then1
+    * timeout1
+    * */
+
+</script>
+</body>
+</html>
