@@ -1,4 +1,4 @@
-#gtihub案例库
+﻿#gtihub案例库
 <p>canvas学习</p>
 <ul>
 <li> <a href='https://github.com/Huaxi100FE/Blog/tree/ata/canvas-test/README.md'>canvas 的系列方发</a>
@@ -38,7 +38,7 @@
 <a href='https://github.com/Huaxi100FE/Blog/tree/ata/js快速排序法/README.md'>js一种快速排序法</a>
 </li>
 </ul>
-<p>grunt 学习</p>
+<p>grunt 学习记录</p>
 <ul>
 <li>
 <a href='https://github.com/Huaxi100FE/Blog/tree/ata/grunt/README.md'>搭建grunt工具</a>
