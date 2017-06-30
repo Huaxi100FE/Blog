@@ -41,7 +41,7 @@
             history.pushState(state,document.title,url);
         }
         if(history.pushState){
-            window.addEventLister('popstate',function(){
+            document.addEventListener('popstate',function(){
                 //code in here...
                 //ajax请求
             });
