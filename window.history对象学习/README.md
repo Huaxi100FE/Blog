@@ -41,7 +41,7 @@
             history.pushState(state,document.title,url);
         }
         if(history.pushState){
-            document.addEventListener('popstate',function(){
+            window.addEventListener('popstate',function(){
                 //code in here...
                 //ajax请求
             });
@@ -58,7 +58,7 @@
             history.pushState(state,document.title,url);
         }
         if(history.pushState){
-            window.addEventLister('popstate',function(){
+            window.addEventListener('popstate',function(){
                 //code in here...
                 //ajax请求
             });
