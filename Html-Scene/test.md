@@ -1,0 +1,38 @@
+### 1.[画出属于你的夏日座驾] (http://0c8a0952908d.ih5.cn/idea/GTd75a_)
+需要用户动手画的，首先画一部分，然后再画一个元素……慢慢组成一个场景，最后还可以去掉多余的。
+个人觉得适用于某一款或者可以相关联的两款产品介绍。通过用户动手，增加这个参与感，是用户印象更加深刻。
+
+### 2.[天津美术学院2016年VR优秀毕业展示] (http://f8716e8cdfca.ih5.cn/idea/j5pB7vO#p1)
+720度旋转，可以点击某些点。
+应用的话，图片需求是个问题。可以应用于某些商家（包括店铺和产品）介绍。
+
+### 3.[中秋，邀请好友一起赏月] (http://sunnyhills.pansen.net.cn/moon/sh)
+一只兔子奔跑中，路上遇到一个个伙伴，一起同行，又遇到一个伙伴，一起同行。然后用户选择你的目的地，你想要说的话，分享之后。通过分享的链接打开，兔子就需要多接个小伙伴，就是你要邀请的人，你需要说的话。
+不知道一路的伙伴是否可以增加或者减少。适合需要分享的，兔子元素之类的都可以替换，以后HTML5中不能提示分享了，可以通过这种互动增加分享扩散。
+
+### 4.[小公举讨红包] (http://magicfinger.h5tu.com/h5/hongbao/index.html)
+囊括了图片上传，裁剪，录音等功能。
+
+### 5.[水墨四季] (http://h5tu.com/h5/InkSeason/)
+纯粹个人喜欢，也许是因为水墨画，古筝曲觉得面新鲜的。
+
+### 6.[2016新版葵花宝典] (http://h5tu.com/h5/gongfu/gongfu/index.html)
+算是一个游戏也可以，四种功夫选择：“凌波微步”点击速度，“吸星大法”就是一个贪吃蛇类似的，“金钟罩”就是切水果类似的游戏，“太极”对着话筒吹气。
+
+### 7.[智者，大成] (http://special.mercedes-benz.com.cn/thenewe-classteaser/mobile/index.html)
+canvas打造的动画很流畅，工程庞大啊，写成一个一个文字。
+
+### 8.[京东2017海外招聘] (http://jdc.jd.com/h5/jd-campus-2017/international/index.html)
+喜欢第二页显示和隐藏的动画效果。
+
+### 9.[金立S6 Pro就耀快发布会] (http://gionees6pro.wutaiwei.com/index.html?friend=1)
+喜欢加载页面，模拟微信，新鲜创意不错。
+
+### 10.[一份没有真新闻却有真实惠的父亲节日报] (http://mws.fengjr.com/public/dist/mobile-web/dist/2016-06/fatherDayHDRB/index.html)
+如同翻阅书籍般的。
+
+### 11.[尚迪] (http://zadig.koikreative.com/)
+动画效果。
+
+### 12.[《大众软件》剑侠情缘特刊] (http://jxqy.qq.com/act/20160530popsoft/1)
+canvas做得和视频差不多了。
