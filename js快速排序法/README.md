@@ -27,7 +27,7 @@ function quickSort(arr){
         var pivot=arr[pivotIndex];
         var left=[],right=[];
         /*第二步：开始比较，如果小于基数，移到基准左边，若大于基数，移到基准右边*/
-        for(var i=0;i<arr.length;i++){
+        for(var i=0; i<arr.length; i++){
             if(arr[i]<arr[pivotIndex]){
                 left.push(arr[i]);
             }
